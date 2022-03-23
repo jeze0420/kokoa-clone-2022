@@ -1,0 +1,57 @@
+0) index는 대부분의 웹서버가 가장 먼저 읽는 파일입니다.
+(이는 브라우저가 가진 디폴트 속성입니다.)
+
+1) '!'는 html 기본 서식을 빠르게 입력할 수 있는 단축키입니다.
+
+2) column이라는 이름은 매우 일반적이기 때문에
+(다른 html 파일에서도 많이 사용되는 이름이라),
+구분을 짓기 위해 '부모 요소__자식요소'로 이름을 짓습니다.
+예) 〈div id="status-bar"〉
+〈div class = "status-bar__column"〉 〈/div〉
+〈/div〉
+
+3) 〈!--내용--〉은 브라우저에게 보이지 않고, 사용자만 볼 수 있는 일종의 메모입니다.
+(물론 개발자 도구로는 볼 수 있습니다. 구현되는 페이지에 드러나지 않을 뿐입니다.)
+
+
+
+- BEM(Block Element Modifier)은 좀 더 쉽게 읽히는 CSS를 가지는 것이다.
+- Block-name__Element-name--Modifier-name 이런 구조를 가진다.
+- CSS를 작성할 때 id였는지 class였는지 헷갈릴 때가 많다. → 때문에 element앞에 
+  "온점(.)"을 붙인다.
+- BEM에서 문제가 하나 생긴다면, 그것은 class가 엄청 커질 수 있다는 것이다.
+- BEM을 싫어하는 사람도 있으며, 그냥 id와 class를 섞어 쓰는 사람들도 있다.
+- 두 가지 방법 모두 쓰이기 때문에, 본인이 더 맞는 방법을 사용하면 된다.
+※참고페이지 https://nykim.work/15 : [CSS 방법론] BEM에대한 이해
+
+
+
+- 아이콘을 추가하는 데에는 두 가지 옵션이 있다.
+1. 직접 아이콘을 구하는 방법(직접 이미지를 만들고 추출하거나 svg파일을 이용.
+   svg는 픽셀이 없는 이미지 파일형식. 수학으로만 구성된 형식)
+2. Heroicons, FontAwesome에서 가져오기
+- FontAwesome에 가입 후 스크립트를 복사해와 붙여넣으면 내 html에 설치된다.
+- FontAwesome에서 가져온 kit code 스크립트는 항상 마지막에 있어야한다.
+  body 태그를 닫기 직전.
+- 이후 원하는 아이콘을 검색 후 복사해서 원하는 위치에 붙여넣기하면 끝
+- 'i'는 icon의 줄임말.
+
+
+link:css + enter : css링크 단축키
+
+web font
+- link 보다 import를 추천한다.
+- import위치는 제일 상단
+- body에 font-family 추가
+- 모든 폰트를 추가하면 웹사이트 무거워진다.
+[Google Fonts](https://fonts.google.com/)
+
+css hack(justify-content대신사용가능)
+- 레시피 같이 어디든 쓸 수 있다. 이상하지만 작동한다.
+- 1 상위 박스 : justify-content: center; -중앙으로 몰림
+- 2 내부 박스 범위 : width: 33%; -왼쪽으로 정렬 후 박스를 3등분
+- 3 중앙에 위치할 박스 : display: flex; justify-content: center; -중앙에 위치할 박스만 중앙에 위치함
+- 4 오른쪽에 정렬할 박스 : *display*: flex; *justify-content*: flex-end; *align-items*: center; -오른쪽에 붙어서 정렬됨
+
+아이콘의 크기를 키우고 싶을때 아이콘 클래스 뒤에 fa-lg 혹은 fa-숫자x(사이즈값) 입력(이건 FontAwesome의 아이콘에서 사용하는거인듯)
+
