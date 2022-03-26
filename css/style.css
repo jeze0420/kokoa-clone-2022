@@ -1,49 +1,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap");
 @import "reset.css";
+@import "variables.css";
 @import "status-bar.css";
 body {
   font-family: "Nunito Sans", sans-serif;
 }
 .header-welcome {
-  margin-top: 95px;
-  margin-bottom: 75px;
+  margin-top: 77px;
+  margin-bottom: 60px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .header-welcome__title {
-  margin-bottom: 35px;
+  margin-bottom: 23px;
   font-size: 25px;
+  font-weight: 600;
 }
 .header-welcome__text {
   width: 60%;
   opacity: 0.7;
+  font-size: 17px;
+  line-height: 22px;
 }
-.form-login1,
-.form-login2 {
+.form-login {
   display: flex;
   flex-direction: column;
   margin: 0px 28px;
 }
-.form-login1 input,
-.form-login2 input {
+.form-login input {
   border: none;
-}
-.form-login1 {
-  margin-bottom: 44px;
-}
-.form-login1 input {
-  border-bottom: 1.3px solid rgb(0, 0, 0, 0.4);
-  font-size: 20px;
-  padding: 30px 0px;
-}
-.form-login1 input::placeholder {
-  color: rgb(0, 0, 0, 0.4);
-}
-.form-login2 input {
-  margin-bottom: 14px;
+  font-size: 18px;
   padding: 22px 0px;
+}
+.form-login input:not([type="submit"]) {
+  border-bottom: 1.3px solid rgba(0, 0, 0, 0.3);
+  transition: border-color 0.3s ease-in-out;
+}
+.form-login input:focus {
+  border-color: var(--yellow);
+}
+.form-login input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+.form-password {
+  margin-bottom: 20px;
+}
+.form-login input[type="submit"] {
+  margin-top: 10px;
+  padding: 20px 0px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 17px;
+  border-bottom: none;
+  background-color: var(--yellow);
+  cursor: pointer;
+}
+.form-login a {
+  margin-top: 19px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 15px;
 }
