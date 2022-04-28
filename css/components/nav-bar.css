@@ -15,26 +15,8 @@
     position: relative;
     color: #2F363E;
 }
-.nav__notification1{
-    color: white;
-    background-color: tomato;
-    width: 22px;
-    height: 22px;
-    border-radius: 11px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.nav__notification{
     position: absolute;
     left: 22px;
     bottom: 17px;
-}
-.nav__notification2{
-    background-color: tomato;
-    width: 5px;
-    height: 5px;
-    border-radius: 2.5px;
-    display: flex;
-    position: absolute;
-    left: 27px;
-    bottom: 29px;
 }
